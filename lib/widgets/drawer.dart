@@ -37,6 +37,35 @@ class LeftDrawer extends StatelessWidget {
               Navigator.pushNamed(context, '/best');
             },
           ),
+          ListTile(
+            leading: Icon(Icons.timer, color: AppColors.pink),
+            title: Text('Compteur', style: TextStyle(color: AppColors.dark)),
+            onTap: () {
+              Navigator.pushNamed(context, '/compteur');
+            },
+          ),
+           ListTile(
+            leading: Icon(Icons.thumb_up, color: AppColors.pink),
+            title: Text('like', style: TextStyle(color: AppColors.dark)),
+            onTap: () {
+              Navigator.pushNamed(context, '/like');
+            },
+          ),
+          ListTile(
+            leading: Icon(Icons.password, color: AppColors.pink),
+            title: Text('pass', style: TextStyle(color: AppColors.dark)),
+            onTap: () {
+              Navigator.pushNamed(context, '/pass');
+            },
+          ),
+          ListTile(
+            leading: Icon(Icons.eleven_mp, color: AppColors.pink),
+            title: Text('container', style: TextStyle(color: AppColors.dark)),
+            onTap: () {
+              Navigator.pushNamed(context, '/container');
+            },
+          ),
+          
         ],
       ),
     );
