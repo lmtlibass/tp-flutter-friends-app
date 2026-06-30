@@ -11,6 +11,8 @@ class FormScreen extends StatefulWidget {
 
 class _FormScreenState extends State<FormScreen> {
   final _formKey = GlobalKey<FormState>();
+  final emailController   = TextEditingController();
+  final passwordController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -28,6 +30,7 @@ class _FormScreenState extends State<FormScreen> {
               crossAxisAlignment: CrossAxisAlignment.end,
               children: [
                 TextFormField(
+                  controller: emailController,
                   keyboardType: TextInputType.emailAddress,
                   decoration: InputDecoration(
                     hintText: "exemple@gmail.com",
@@ -47,6 +50,7 @@ class _FormScreenState extends State<FormScreen> {
                 SizedBox(height: 25),
 
                 TextFormField(
+                  controller: passwordController,
                   obscureText: true,
                   decoration: InputDecoration(
                     hintText: "*********",
@@ -55,6 +59,12 @@ class _FormScreenState extends State<FormScreen> {
                       borderRadius: BorderRadius.circular(10.0),
                     ),
                   ),
+                  validator: (value) {
+                    if (value == null || value.length < 8) {
+                      return "Le champ mots de pass doit avoir plus de 8 char..";
+                    }
+                    return null;
+                  },
                 ),
 
                 SizedBox(height: 25),
