@@ -65,6 +65,13 @@ class LeftDrawer extends StatelessWidget {
               Navigator.pushNamed(context, '/container');
             },
           ),
+           ListTile(
+            leading: Icon(Icons.add, color: AppColors.pink),
+            title: Text('formulaire', style: TextStyle(color: AppColors.dark)),
+            onTap: () {
+              Navigator.pushNamed(context, '/formulaire');
+            },
+          ),
           
         ],
       ),

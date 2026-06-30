@@ -4,6 +4,7 @@ import 'package:myfriends/screens/best_friend_screen.dart';
 import 'package:myfriends/screens/compteur_screen.dart';
 import 'package:myfriends/screens/container_screen.dart';
 import 'package:myfriends/screens/details_ami_screen.dart';
+import 'package:myfriends/screens/formulaire.dart';
 import 'package:myfriends/screens/like_screen.dart';
 import 'package:myfriends/screens/liste_amis_screen.dart';
 import 'package:myfriends/screens/pass.dart';
@@ -48,7 +49,8 @@ class MyApp extends StatelessWidget {
         '/compteur': (context) => CompteurScreen(),
         '/like': (context) => LikeScreen(),
         '/pass': (context) => PassScreen(),
-        '/container': (context) => ContainerScreen()
+        '/container': (context) => ContainerScreen(),
+        '/formulaire': (context) => FormScreen(),
       },
       home: HomePage(),
     );
